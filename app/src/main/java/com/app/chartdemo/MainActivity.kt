@@ -99,7 +99,7 @@ class MainActivity : AppCompatActivity(), OnChartValueSelectedListener {
         set1.setDrawVerticalHighlightIndicator(false)
         set1.lineWidth = 2f
         set1.setCircleColor(Color.parseColor("#131B1F"))
-        set1.circleRadius = 4f
+        set1.circleRadius = 2f
         set1.setDrawValues(false)
         set1.setDrawCircleHole(false)
 
@@ -117,13 +117,13 @@ class MainActivity : AppCompatActivity(), OnChartValueSelectedListener {
         beforeChartItem?.apply {
             icon = ContextCompat.getDrawable(
                 this@MainActivity,
-                R.drawable.de_selected_chart_item
+                R.drawable.ic_de_selected_chart_item
             )
         }
         beforeChartItem = e
         e?.icon = ContextCompat.getDrawable(
             this,
-            R.drawable.selected_chart_item
+            R.drawable.ic_selected_chart_item
         )
     }
 
@@ -131,7 +131,7 @@ class MainActivity : AppCompatActivity(), OnChartValueSelectedListener {
         beforeChartItem?.apply {
             icon = ContextCompat.getDrawable(
                 this@MainActivity,
-                R.drawable.de_selected_chart_item
+                R.drawable.ic_de_selected_chart_item
             )
         }
     }
