@@ -20,7 +20,7 @@ import kotlin.random.Random
 
 class MainActivity : AppCompatActivity(), OnChartValueSelectedListener {
 
-    var chart: LineChart? = null
+    private var chart: LineChart? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -95,6 +95,8 @@ class MainActivity : AppCompatActivity(), OnChartValueSelectedListener {
         // create a dataset and give it a type
         val set1 = LineDataSet(entries, "")
         set1.color = Color.parseColor("#E7E8E9")
+        set1.setDrawHorizontalHighlightIndicator(false)
+        set1.setDrawVerticalHighlightIndicator(false)
         set1.lineWidth = 2f
         set1.setCircleColor(Color.parseColor("#131B1F"))
         set1.circleRadius = 4f
