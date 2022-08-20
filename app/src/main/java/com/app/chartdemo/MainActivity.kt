@@ -8,6 +8,7 @@ import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.components.Legend
 import com.github.mikephil.charting.components.Legend.LegendForm
 import com.github.mikephil.charting.components.XAxis
+import com.github.mikephil.charting.components.YAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
@@ -58,8 +59,10 @@ class MainActivity : AppCompatActivity(), OnChartValueSelectedListener {
             val xAxis = xAxis
             xAxis.axisLineColor = Color.parseColor("#E7E8E9")
             //xAxis.typeface = tfLight
-            xAxis.textSize = 12f
-            xAxis.textColor = Color.WHITE
+            //to hide bottom text
+            xAxis.axisLineWidth = 1f
+            xAxis.textSize = 0f
+            xAxis.textColor = Color.TRANSPARENT
             xAxis.setDrawGridLines(false)
             xAxis.setDrawAxisLine(true)
             xAxis.position = XAxis.XAxisPosition.BOTTOM
@@ -69,10 +72,10 @@ class MainActivity : AppCompatActivity(), OnChartValueSelectedListener {
             val leftAxis = axisLeft
             //leftAxis.typeface = tfLight
             leftAxis.textColor = Color.parseColor("#737779")
+            leftAxis.setDrawGridLines(false)
             leftAxis.setDrawAxisLine(false)
             leftAxis.axisMaximum = maxY
             leftAxis.axisMinimum = minY
-            leftAxis.setDrawGridLines(false)
             leftAxis.isGranularityEnabled = true
 
             val rightAxis = axisRight
